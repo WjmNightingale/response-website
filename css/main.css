@@ -1,0 +1,378 @@
+/************
+ * 页面样式
+ ************/
+
+/* ==========
+   基本默认值
+   ========== */
+
+html {
+    font-size: 62.5%;
+    color: #222;
+}
+
+::selection {
+    background-color: #b3d4fc;
+    text-shadow: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+/* ==========
+   工具样式
+   ========== */
+
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.pull-left {
+    float: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.text-hide {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+/* ===============
+   浏览器更新提示
+   =============== */
+
+.browser-upgrade {
+    margin: 0;
+    padding: 1rem;
+    background-color: #ccc;
+}
+
+/* ===============
+   页面样式
+   =============== */
+
+body {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    background-color: #f7f7f7;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    color: #0ae;
+    text-decoration: underline;
+}
+
+/* 网站头部 */
+
+header {
+    width: 100%;
+}
+
+header .top {
+    line-height: 3rem;
+    padding: 0 1.5rem;
+    color: #fff;
+    background-color: #555;
+    border-bottom: 1px #ecc000 solid;
+}
+
+header .top .tel {
+    float: left;
+}
+
+header .top ul {
+    text-align: right;
+}
+
+header .top ul li+li {
+    border-left: 1px solid #999;
+    margin-left: -3px;
+}
+
+header .top ul li a {
+    display: inline-block;
+    padding: 0 1.5rem;
+    color: #fff;
+}
+
+@media only screen and (max-width: 50em) {
+    header .top ul li a {
+        padding: 0 1rem;
+    }
+}
+
+@media only screen and (min-width: 30.0625em) and (max-width: 50em) {
+    /* 没有特殊样式 */
+}
+
+@media only screen and (max-width: 30em) {
+    header .top .tel,
+    header .top ul li:nth-child(3),
+    header .top ul li:nth-child(4) {
+        display: none;
+    }
+}
+
+header .main {
+    padding: 0;
+}
+
+header .main .brand {
+    float: left;
+    padding: 1rem 1.5rem 0;
+}
+
+header .main ul {
+    text-align: right;
+}
+
+header .main ul li {
+    display: inline-block;
+    border-left: 1px solid #f0ede9;
+}
+
+header .main ul li a {
+    display: inline-block;
+    padding: 0 2.5rem;
+    line-height: 5.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #7c7a65;
+    text-decoration: none;
+}
+
+header .main ul li a:hover,
+header .main ul li a:active,
+header .main ul li a.active {
+    color: #ffb300;
+    background-color: #f8f6f1;
+}
+
+@media only screen and (max-width: 50em) {
+    header .main .brand {
+        float: none;
+        display: block;
+        padding: 0;
+        margin: 1.5rem auto 0.5rem;
+        text-align: center;
+    }
+    header .main ul {
+        text-align: center;
+    }
+    header .main ul li {
+        border: none;
+    }
+    header .main ul li a {
+        padding: 0 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 30em) {
+    header .main ul li {
+        line-height: 3rem;
+    }
+    header .main ul li:first-child {
+        display: none;
+    }
+    header .main ul li a {
+        font-weight: normal;
+        padding: 0 0.5rem;
+    }
+}
+
+/* 网站主要内容 */
+
+.transaction {
+    width: 100%;
+    background-color: #7c7365;
+}
+
+.trans-content {
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+.trans-data {
+    float: left;
+    padding: 1rem;
+    text-align: left;
+}
+
+.trans-data span {
+    display: inline-block;
+    line-height: 3rem;
+    color: #fff;
+}
+
+.trans-data span.trans-money {
+    font-size: 2.2rem;
+    color: #ff9900;
+    letter-spacing: 3px;
+    margin: 0 1rem;
+    padding: 0 1rem;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 1px 2px 1px #333 inset;
+}
+
+.trans-report {
+    text-align: right;
+}
+
+.trans-report a {
+    display: inline-block;
+    padding: 1rem;
+    line-height: 3rem;
+    color: #fff;
+}
+ 
+@media only screen and (max-width: 50em) {
+    .trans-data {
+        padding: 1rem 0.5rem;
+    }
+    .trans-data span {
+        font-size: 1.2rem;
+    }
+    .trans-data span.trans-money {
+        font-size: 1.6rem;
+        margin: 0;
+        padding: 0;
+        letter-spacing: inherit;
+        box-shadow: none;
+        background: transparent;
+    }
+    .trans-report a {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 30em) {
+
+    .transaction {
+        padding: 0.5rem 0;
+    }
+    .trans-data , .trans-report {
+        float: none;
+        text-align: center;
+    }
+    .trans-data , .trans-report a {
+        padding: 0;
+    }
+
+}
+
+/* 滚动广告 */
+.ad {
+    /* display: none;*/
+}
+
+/* 平台特点 */
+.feature {
+    width: 90%;
+    margin: 2rem auto;
+    font-size: 0;
+}
+.feature .item {
+    display: inline-block;
+    width: calc(33.33333% - 3rem);
+    padding: 1rem 1rem 1rem 1rem;
+    font-size: 1.4rem;
+    background-color: #fff;
+    box-shadow: 0 0 4px #ccc;
+}
+.feature .item + .item {
+    margin-left: 1.5rem;
+}
+
+.feature .item h3 {
+    display: inline-block;
+    width: 40%;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    font-size: 3.3rem;
+    text-align: center;
+    color: #ff9900;
+}
+
+.feature .item p {
+    display: inline-block;
+    width: 55%;
+    margin: 0;
+    padding: 0;
+    color: #999;
+}
+
+@media only screen and (min-width: 30.0625rem) and (max-width: 50em) {
+    .feature .item h3 ,
+    .feature .item p {
+        display: block;
+        width: 100%;
+        font-size: 2.6rem;
+        text-align: center;
+    }
+    .feature .item p {
+        font-size: 1.2rem;
+    }
+}
+@media only screen and (max-width: 30em) {
+    .feature {
+        width: 96%;
+        margin: 1rem auto;
+    }
+}
